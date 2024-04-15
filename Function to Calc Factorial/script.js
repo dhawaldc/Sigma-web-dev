@@ -10,7 +10,7 @@ console.log(factorial(a))
 
 function factOf(number){
     let fac=1;
-    for (let index = 1; index <= array.length; index++) {
+    for (let index = 1; index <= number; index++) {
         fac = fac*index;
         
     }

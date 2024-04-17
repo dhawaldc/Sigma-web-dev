@@ -52,4 +52,6 @@ p5.then((a)=>{
     console.log(e)
 })
 //settle means it donesnot matter if promise resolves or reject it just needs to work and give the value of that promise
+//race means whichever promise is resolved first its value will be given as a result
+
 

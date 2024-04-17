@@ -30,12 +30,26 @@ let prom2=new Promise((resolve, reject) => {
 //     console.log(err);
     
 // })
-let p3=Promise.all([prom2, prom1]);//both promise needs to be resolved then only it will give the value of both the promises otherwise it will give e
-p3.then((a)=>{
+// let p3=Promise.all([prom2, prom1]);//both promise needs to be resolved then only it will give the value of both the promises otherwise it will give e
+// p3.then((a)=>{
+//     console.log(a);
+    
+// }).catch((e)=>{
+//     console.log("Error is "+ e)
+// })
+// let p4=Promise.allSettled([prom2, prom1]);
+// p4.then((a)=>{
+//     console.log(a);
+    
+// }).catch((e)=>{
+//     console.log("Error is "+ e)
+// })
+let p5=Promise.race([prom2, prom1]);
+p5.then((a)=>{
     console.log(a);
     
 }).catch((e)=>{
-    console.log("Error is "+ e)
+    console.log(e)
 })
-
+//settle means it donesnot matter if promise resolves or reject it just needs to work and give the value of that promise
 
